@@ -210,6 +210,8 @@ public class Pd6TedShaMicroFB {
         // too many times, it can cause a stackoverflow error. However, the chances of
         // that is about 1 in 1,216,652,902,400 - assuming the max stack size is set to
         // 512KB.
+      // NOTE at a later date: the above is actually not *that* correct because for every name generated,
+      //                       the chances go up, so that number is actually only valid for the first name.
         if (commands.checkIfProfileAlreadyExist(randomName)) {
             System.out.println("Error: randomly generated profile name already exists, generating a new one");
             generateRandomName();
